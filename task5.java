@@ -12,9 +12,6 @@ public class task5 {
     }
 
     public static void printAllEven(int [] list) {
-        if(list.length < 1) {
-            return;
-        }
         int index = 0;
         printEvenElement(index, list);
     }

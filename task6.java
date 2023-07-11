@@ -10,9 +10,6 @@ public class task6 {
     }
 
     public static void printAllWithEvenInd(int [] list) {
-        if(list.length < 1) {
-            return;
-        }
         int index = 0;
         printWithEvenInd(index, list);
     }
