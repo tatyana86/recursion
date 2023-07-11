@@ -1,19 +1,16 @@
+import java.util.*;
+
 public class task5 {
 
-    public static void printEvenElement(int index, int[] list) {
-        if(index == list.length) {
+    public static void printAllEven(List<Integer> list) {
+        if(list.size() == 0) {
             return;
         }
-        if(list[index] % 2 == 0) {
-            System.out.print(list[index] + " ");
+        if(list.get(0) % 2 == 0) {
+            System.out.print(list.get(0) + " ");
         }
-        index ++;
-        printEvenElement(index, list);
-    }
 
-    public static void printAllEven(int [] list) {
-        int index = 0;
-        printEvenElement(index, list);
+        printAllEven(list.subList(1, list.size()));
     }
 
 }

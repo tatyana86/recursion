@@ -1,17 +1,15 @@
+import java.util.*;
+
 public class task6 {
 
-    public static void printWithEvenInd(int index, int[] list) {
-        if(index >= list.length) {
+    public static void printAllWithEvenInd(List<Integer> list) {
+        if(list.size() == 0) {
             return;
         }
-        System.out.print(list[index] + " ");
-        index += 2;
-        printWithEvenInd(index, list);
-    }
-
-    public static void printAllWithEvenInd(int [] list) {
-        int index = 0;
-        printWithEvenInd(index, list);
+        System.out.print(list.get(0) + " ");
+        if(list.size() != 1) {
+            printAllWithEvenInd(list.subList(2, list.size()));
+        }
     }
 
 }
