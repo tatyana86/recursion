@@ -1,26 +1,20 @@
 public class task6 {
 
-    public static int[] removeTwoElem(int[] list) {
-        if(list.length < 3) {
-            return new int[0];
+    public static void printWithEvenInd(int index, int[] list) {
+        if(index >= list.length) {
+            return;
         }
-
-        int [] newList = new int[list.length - 2];
-
-        for(int i = 0; i < newList.length; i ++) {
-            newList[i] = list [i + 2];
-        }
-
-        return newList;
+        System.out.print(list[index] + " ");
+        index += 2;
+        printWithEvenInd(index, list);
     }
 
-    public static void printEvenInd(int [] list) {
+    public static void printAllWithEvenInd(int [] list) {
         if(list.length < 1) {
             return;
         }
-        System.out.print(list[0] + " ");
-        list = removeTwoElem(list);
-        printEvenInd(list);
+        int index = 0;
+        printWithEvenInd(index, list);
     }
 
 }
