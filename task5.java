@@ -3,14 +3,17 @@ import java.util.*;
 public class task5 {
 
     public static void printAllEven(List<Integer> list) {
-        if(list.size() == 0) {
+        printEven(0, list);
+    }
+
+    public static void printEven(int index, List<Integer> list) {
+        if(index == list.size()) {
             return;
         }
-        if(list.get(0) % 2 == 0) {
-            System.out.print(list.get(0) + " ");
+        if(list.get(index) % 2 == 0) {
+            System.out.print(list.get(index) + " ");
         }
-
-        printAllEven(list.subList(1, list.size()));
+        printEven(index + 1, list);
     }
 
 }
